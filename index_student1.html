@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User list</title>
+  </head>
+  <style>
+      #user-display-wrapper{width:70%;
+      margin:10px auto;}
+    .user-list-card img {
+      width: 50px;
+      height: 50px;
+      margin: 0px 10px 0px 10px;
+    }
+    .user-list-card {
+      background: #bbb;
+      list-style: none;
+      padding: 10px;
+      display: flex;
+      align-items:center;
+      justify-content:stretch;
+    }
+    .user-list-card h4 {
+      background-color: rgba(45, 46, 39, 0.49);
+      padding: 5px;
+      color: #fff;
+      margin:30px;
+    }
+    .user-list-card h4::before {
+      content: "User Name: ";
+    }
+    .user-list-card:nth-child(even) {
+      background: rgba(184, 190, 155, 0.49);
+    }
+    .user-list-card:nth-child(odd) {
+      background: rgba(138, 151, 81, 0.79);
+    }
+    h2{
+        color:sienna;
+        text-align: center;
+        margin: 50px auto;
+    }
+    button{
+            height: 30px;
+            background-color: rgb(94, 205, 90);
+        }
+    form{
+        font-size:18px;
+        width:60%;
+        margin:10px;}
+    form p{font-weight: 600;}
+    #sub{
+        height: 30px;
+        background-color: springgreen;
+    }
+        
+  </style>
+  <body>
+    <div class="user-data-wrapper">
+      <div>
+        <form name="creteUserForm">
+          <fieldset>
+            <legend name="legend_e"></legend>Crete new user</legend>
+            <label for="name">
+              <p>Enter Full user Name</p>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                required
+                placeholder="Enter you full name"
+              />
+            </label>
+            <label for="age">
+              <p>Enter user Age</p>
+              <input
+                id="age"
+                type="number"
+                name="age"
+                required
+                placeholder="Enter user Age"
+              />
+            </label>
+
+            <label for="picUrl">
+              <p>Enter picture</p>
+              <input
+                id="picUrl"
+                type="url"
+                name="picUrl"
+                pattern="https://.*"
+                required
+                placeholder="Enter picture url"
+              />
+            </label>
+
+            <input type="submit" name="sub" id="sub" value="Crete" />
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <h2>User List</h2>
+        <ol id="user-display-wrapper"></ol>
+      </div>
+    </div>
+
+    <script src="./script_student1_new5.js"></script>
+  </body>
+</html>
